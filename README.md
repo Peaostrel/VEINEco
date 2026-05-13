@@ -20,7 +20,9 @@
 * **Hub Ecosystem**: 
   - **VEIN AI**: Персональный помощник в Telegram.
   - **VEIN Music**: Агрегатор музыкальной статистики.
+  - **VEINYMusic**: Discord Rich Presence для Яндекс Музыки.
   - **VEIN Pulse**: Личное социальное пространство.
+  - **VEINClaw v6.0**: Автономный агент для управления инфраструктурой экосистемы.
 * **Performance & SEO**: 
   - Высокая скорость загрузки благодаря Next.js App Router.
   - Полная SEO-оптимизация (Metadata, OpenGraph, sitemap.ts, robots.ts).
