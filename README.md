@@ -21,6 +21,7 @@
   - **VEIN AI**: Персональный помощник в Telegram.
   - **VEIN Music**: Агрегатор музыкальной статистики.
   - **VEIN Pulse**: Личное социальное пространство.
+  - **VEINClaw v5.0**: Автономный агент для управления инфраструктурой экосистемы.
 * **Performance & SEO**: 
   - Высокая скорость загрузки благодаря Next.js App Router.
   - Полная SEO-оптимизация (Metadata, OpenGraph, sitemap.ts, robots.ts).
