@@ -405,48 +405,6 @@ export default function Home() {
         {/* ── CARDS ── */}
         <div className="cards">
 
-          {/* AI Card */}
-          <article 
-            className="card card--ai" 
-            style={{ animationDelay: '0ms' }} 
-            onMouseEnter={playHoverSound}
-            onMouseMove={handleCardMove}
-            onMouseLeave={handleCardLeave}
-          >
-            <div className="card-glow" />
-            <div className="card-noise" />
-            <div className="card-inner">
-              <header className="card-head">
-                <div className="card-title-row">
-                  <span className="card-icon">✦</span>
-                  <h2>VEIN AI</h2>
-                </div>
-                <span className="badge badge--wip">В РАЗРАБОТКЕ</span>
-              </header>
-              <p className="card-desc">
-                Персональный интеллект в Telegram. Помнит тебя, слышит тебя, думает вместе с тобой.
-              </p>
-              <ul className="feat-list">
-                <li className="feat">
-                  <span className="feat-name">RAG Memory</span>
-                  <span className="feat-desc">Долгосрочная память — контекст не теряется</span>
-                </li>
-                <li className="feat">
-                  <span className="feat-name">Voice & Vision</span>
-                  <span className="feat-desc">Понимает голос, генерирует арты</span>
-                </li>
-                <li className="feat">
-                  <span className="feat-name">Web & Tools</span>
-                  <span className="feat-desc">Ищет в интернете, читает PDF и сайты</span>
-                </li>
-              </ul>
-              <div className="card-footer">
-                <span className="card-soon">Скоро —</span>
-                <span className="card-soon-detail">Telegram-бот</span>
-              </div>
-            </div>
-          </article>
-
           {/* Music Card */}
           <article 
             className="card card--music" 
@@ -454,6 +412,7 @@ export default function Home() {
             onMouseEnter={playHoverSound}
             onMouseMove={handleCardMove}
             onMouseLeave={handleCardLeave}
+            onClick={() => window.open('https://github.com/Peaostrel/VEINMusic', '_blank')}
           >
             <div className="card-glow" />
             <div className="card-noise" />
@@ -496,6 +455,7 @@ export default function Home() {
             onMouseEnter={playHoverSound}
             onMouseMove={handleCardMove}
             onMouseLeave={handleCardLeave}
+            onClick={() => window.open('https://github.com/ktoto246/Messenger', '_blank')}
           >
             <div className="card-glow" />
             <div className="card-noise" />
@@ -531,6 +491,49 @@ export default function Home() {
             </div>
           </article>
 
+          {/* VEINYMusic Card */}
+          <article 
+            className="card card--veinymusic" 
+            style={{ animationDelay: '360ms' }} 
+            onMouseEnter={playHoverSound}
+            onMouseMove={handleCardMove}
+            onMouseLeave={handleCardLeave}
+            onClick={() => window.open('https://github.com/Peaostrel/VEINYMusic', '_blank')}
+          >
+            <div className="card-glow" />
+            <div className="card-noise" />
+            <div className="card-inner">
+              <header className="card-head">
+                <div className="card-title-row">
+                  <span className="card-icon">♫</span>
+                  <h2>VEINYMusic</h2>
+                </div>
+                <span className="badge badge--release">РЕЛИЗ</span>
+              </header>
+              <p className="card-desc">
+                Бескомпромиссная интеграция Яндекс Музыки в Discord Rich Presence. Без токенов и расширений.
+              </p>
+              <ul className="feat-list">
+                <li className="feat">
+                  <span className="feat-name">Zero-Config</span>
+                  <span className="feat-desc">Не нужно логиниться — работает прямо из ОС</span>
+                </li>
+                <li className="feat">
+                  <span className="feat-name">Strict Mode</span>
+                  <span className="feat-desc">Фильтрует YouTube и фоновый шум</span>
+                </li>
+                <li className="feat">
+                  <span className="feat-name">Cloud Metadata</span>
+                  <span className="feat-desc feat-desc--dim">Мгновенно тянет 400x400 обложки альбомов</span>
+                </li>
+              </ul>
+              <div className="card-footer">
+                <span className="card-soon">Доступно —</span>
+                <span className="card-soon-detail">GitHub Open Source</span>
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
 
@@ -546,7 +549,7 @@ export default function Home() {
       </footer>
 
       {/* ── VERSION ── */}
-      <div className="version-tag">v0.1 &middot; 3 проекта</div>
+      <div className="version-tag">v0.1 &middot; 4 проекта</div>
 
       {/* ── EASTER EGG PLAYER ── */}
       {showPudge && (
@@ -600,11 +603,6 @@ export default function Home() {
 
               <div className="about-grid">
                 <div className="about-grid-item">
-                  <span className="grid-icon">✦</span>
-                  <h4>VEIN AI</h4>
-                  <p>мой личный ии в телеграме, который помнит контекст.</p>
-                </div>
-                <div className="about-grid-item">
                   <span className="grid-icon">◈</span>
                   <h4>VEIN Music</h4>
                   <p>трекер, который просто собирает мою музыку, где бы я её ни слушал.</p>
@@ -613,6 +611,11 @@ export default function Home() {
                   <span className="grid-icon">◎</span>
                   <h4>VEIN Pulse</h4>
                   <p>лента только для своих, без умных алгоритмов и спама.</p>
+                </div>
+                <div className="about-grid-item">
+                  <span className="grid-icon" style={{color: 'var(--veinymusic)'}}>♫</span>
+                  <h4>VEINYMusic</h4>
+                  <p>ультимативная интеграция яндекс музыки в discord rpc.</p>
                 </div>
               </div>
             </div>
