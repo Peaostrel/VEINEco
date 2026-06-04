@@ -549,7 +549,7 @@ export default function Home() {
       </footer>
 
       {/* ── VERSION ── */}
-      <div className="version-tag">v0.1 &middot; 4 проекта</div>
+
 
       {/* ── EASTER EGG PLAYER ── */}
       {showPudge && (
