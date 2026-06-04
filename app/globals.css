@@ -18,6 +18,9 @@
   --gold:       #c9a96e;
   --pulse:      #b45309;
   --pulse-glow: rgba(180, 83, 9, 0.22);
+
+  --veinymusic: #eab308;
+  --veinymusic-glow: rgba(234, 179, 8, 0.22);
 }
 
 /* Custom cursor */
@@ -403,6 +406,11 @@ canvas {
   box-shadow: 0 24px 70px rgba(150,80,9,0.16), inset 0 0 40px rgba(150,80,9,0.05);
 }
 
+.card--veinymusic:hover {
+  border-color: rgba(234, 179, 8, 0.45);
+  box-shadow: 0 24px 70px rgba(234, 179, 8, 0.16), inset 0 0 40px rgba(234, 179, 8, 0.05);
+}
+
 /* Noise texture overlay */
 .card-noise {
   position: absolute;
@@ -429,6 +437,7 @@ canvas {
 .card--ai    .card-glow { background: radial-gradient(circle, #6d28d9, #3b0764); }
 .card--music .card-glow { background: radial-gradient(circle, #b91c1c, #7f1d1d); }
 .card--pulse .card-glow { background: radial-gradient(circle, #b45309, #78350f); }
+.card--veinymusic .card-glow { background: radial-gradient(circle, #ca8a04, #713f12); }
 
 .card:hover .card-glow { opacity: 0.32; }
 
@@ -449,6 +458,10 @@ canvas {
 
 .card--pulse::before {
   background: linear-gradient(90deg, transparent 0%, rgba(180,100,9,0.35) 50%, transparent 100%);
+}
+
+.card--veinymusic::before {
+  background: linear-gradient(90deg, transparent 0%, rgba(234,179,8,0.35) 50%, transparent 100%);
 }
 
 /* Animated shimmer border on hover */
@@ -497,6 +510,11 @@ canvas {
   background-size: 200% 100%;
 }
 
+.card--veinymusic::after {
+  background: linear-gradient(90deg, transparent 0%, transparent 40%, rgba(250,204,21,1) 50%, transparent 60%, transparent 100%);
+  background-size: 200% 100%;
+}
+
 .card:hover::after {
   opacity: 1;
   animation-play-state: running;
@@ -534,6 +552,7 @@ canvas {
 .card--ai    .card-icon { color: var(--ai); }
 .card--music .card-icon { color: var(--music); }
 .card--pulse .card-icon { color: var(--pulse); }
+.card--veinymusic .card-icon { color: var(--veinymusic); }
 
 .card:hover .card-icon { opacity: 1; }
 
@@ -549,6 +568,7 @@ canvas {
 .card--ai:hover    .card-head h2 { color: #c084fc; }
 .card--music:hover .card-head h2 { color: #f87171; }
 .card--pulse:hover .card-head h2 { color: #fbbf24; }
+.card--veinymusic:hover .card-head h2 { color: #fde047; }
 
 /* Card tagline */
 .card-desc {
@@ -564,6 +584,7 @@ canvas {
 
 .card--music .card-desc { border-left-color: rgba(180,20,20,0.2); }
 .card--pulse .card-desc { border-left-color: rgba(180,100,9,0.2); }
+.card--veinymusic .card-desc { border-left-color: rgba(234,179,8,0.2); }
 
 .card:hover .card-desc { color: rgba(200, 180, 240, 0.65); }
 
@@ -583,6 +604,13 @@ canvas {
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(180,160,220,0.18);
   color: rgba(200,185,235,0.5);
+  letter-spacing: 0.12em;
+}
+
+.badge--release {
+  background: rgba(234,179,8,0.1);
+  border: 1px solid rgba(234,179,8,0.3);
+  color: rgba(250,204,21,0.8);
   letter-spacing: 0.12em;
 }
 
@@ -614,6 +642,7 @@ canvas {
 .card--ai    .feat::before { background: #a855f7; opacity: 0.55; }
 .card--music .feat::before { background: #dc2626; opacity: 0.55; }
 .card--pulse .feat::before { background: #b45309; opacity: 0.55; }
+.card--veinymusic .feat::before { background: #eab308; opacity: 0.55; }
 
 .feat-name {
   font-size: 0.78rem;
@@ -649,6 +678,7 @@ canvas {
 
 .card--music .card-footer { border-top-color: rgba(180,20,20,0.1); }
 .card--pulse .card-footer { border-top-color: rgba(180,100,9,0.1); }
+.card--veinymusic .card-footer { border-top-color: rgba(234,179,8,0.1); }
 
 .card:hover .card-footer {
   opacity: 1;
@@ -665,6 +695,7 @@ canvas {
 
 .card--music .card-soon { color: rgba(220,80,80,0.45); }
 .card--pulse .card-soon { color: rgba(200,140,30,0.45); }
+.card--veinymusic .card-soon { color: rgba(234,179,8,0.45); }
 
 .card-soon-detail {
   font-family: 'Space Grotesk', sans-serif;
